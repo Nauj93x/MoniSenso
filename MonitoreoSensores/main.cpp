@@ -1,6 +1,3 @@
-//
-// Created by jose-jaramillo on 3/26/24.
-//
 #include <iostream>
 #include <unistd.h>
 #include <sys/wait.h>
