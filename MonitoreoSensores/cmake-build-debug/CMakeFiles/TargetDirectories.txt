@@ -1,0 +1,4 @@
+C:/Users/Asus/OneDrive/Escritorio/monitor/MonitoreoSensores/MonitoreoSensores-main/cmake-build-debug/CMakeFiles/monitor.dir
+C:/Users/Asus/OneDrive/Escritorio/monitor/MonitoreoSensores/MonitoreoSensores-main/cmake-build-debug/CMakeFiles/sensor.dir
+C:/Users/Asus/OneDrive/Escritorio/monitor/MonitoreoSensores/MonitoreoSensores-main/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Asus/OneDrive/Escritorio/monitor/MonitoreoSensores/MonitoreoSensores-main/cmake-build-debug/CMakeFiles/rebuild_cache.dir
