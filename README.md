@@ -15,7 +15,7 @@ En esta presentación se explica el sistema completo para la simulación y monit
 ### Código
 - **buffer.cpp - buffer.h**: Módulos que implementan los búferes para almacenar temporalmente las medidas de los sensores.
 - **datos.txt**: Archivo de datos para pruebas.
-- **file-ph.txt - file-temp.txt**: Archivos de salida donde se almacenarán las medidas de pH y temperatura respectivamente.
+- **pH-data.txt - temperature-data.txt**: Archivos de salida donde se almacenarán las medidas de pH y temperatura respectivamente.
 - **monitor.cpp**: Implementación del proceso monitor que gestiona los hilos recolector, H-pH y H-temperatura.
 - **sensor.cpp**: Implementación de los procesos simuladores de sensores que envían datos al monitor.
 - **makefile**: Script de automatización para compilar y ejecutar el proyecto.
@@ -31,24 +31,24 @@ make
 ### Ejecución del Monitor
 Desde el shell, invoque el proceso del monitor de la siguiente manera:
 ```bash
-./monitor -b tam_buffer -t file-temp -h file-ph -p pipe-nominal
+./monitor -b bufferSize -t temperature-data -h pH-data -p pipeName
 ```
 Donde:
-- `tam-buffer`: Tamaño de los búferes donde se almacenarán las medidas.
-- `file-temp`: Nombre del archivo de texto donde el hilo de temperatura almacenará las mediciones de temperatura recibidas.
-- `file-ph`: Nombre del archivo de texto donde el hilo de pH almacenará las mediciones de pH recibidas.
-- `pipe-nominal`: Pipe nominal utilizado para la comunicación con el sensor.
+- `bufferSize`: Tamaño de los búferes donde se almacenarán las medidas.
+- `temperature-data`: Nombre del archivo de texto donde el hilo de temperatura almacenará las mediciones de temperatura recibidas.
+- `pH-data`: Nombre del archivo de texto donde el hilo de pH almacenará las mediciones de pH recibidas.
+- `pipeName`: Pipe nominal utilizado para la comunicación con el sensor.
 
 ### Ejecución de los Sensores
 Desde el shell, invoque los procesos de los sensores de la siguiente manera:
 ```bash
-./sensor -s tipo-sensor -t tiempo -f archivo -p pipe-nominal
+./sensor -s tipoSensor -t tiempo -f archivo -p pipeName
 ```
 Donde:
-- `tipo-sensor`: Tipo de sensor, puede ser `PH` o `temperatura` (1 o 2).
+- `tipoSensor`: Tipo de sensor, puede ser `PH` o `temperatura` (1 o 2).
 - `tiempo`: Intervalo de tiempo entre las medidas.
 - `archivo`: Archivo de configuración para el sensor.
-- `pipe-nominal`: Pipe nominal utilizado para la comunicación con el monitor.
+- `pipeName`: Pipe nominal utilizado para la comunicación con el monitor.
 
 ### Ejemplo
 Compilación del proyecto:
@@ -58,7 +58,7 @@ make
 
 Ejecución del monitor:
 ```bash
-./monitor -b 10 -t file-temp.txt -h file-ph.txt -p pipe1
+./monitor -b 10 -t temperature-data.txt -h pH-data.txt -p pipe1
 ```
 
 Ejecución del sensor (debe ejecutarse en menos de 10 segundos después del monitor):
