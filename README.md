@@ -68,5 +68,5 @@ Ejecución del sensor (debe ejecutarse en menos de 10 segundos después del moni
 
 ## Documentación del Desarrollo
 Puede acceder al contenido del proyecto e sus especificaciones a través del siguiente enlace:
-[Documentación del Proyecto]()
+[Documentación del Proyecto](MonitoreoSensores/MonitoreoSensores/ProyectosMoniSenso.pdf)
 ```
