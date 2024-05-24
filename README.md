@@ -67,6 +67,6 @@ Ejecución del sensor (debe ejecutarse en menos de 10 segundos después del moni
 ```
 
 ## Documentación del Desarrollo
-Puede acceder a la documentación completa del desarrollo del proyecto en el siguiente enlace:
+Puede acceder al contenido del proyecto e sus especificaciones a través del siguiente enlace:
 [Documentación del Proyecto]()
 ```
