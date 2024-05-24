@@ -68,4 +68,9 @@ Ejecute el sensor (debe ser activado en menos de 10 segundos tras el inicio del 
 
 ## Detalles del Proyecto
 Para conocer más sobre el desarrollo del proyecto y sus especificaciones, acceda al siguiente enlace:
-[Documentación del Proyecto](MonitoreoSensores/MonitoreoSensores/ProyectosMoniSenso.pdf)
+[Enunciado del Proyecto](MonitoreoSensores/MonitoreoSensores/ProyectosMoniSenso.pdf)
+[Documentación del Proyecto](https://drive.google.com/file/d/1SjNGoGDtmeVB9IbDvwwBlRSYugdWSRcL/view?usp=drive_link)
+
+
+
+
