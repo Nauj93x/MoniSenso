@@ -45,11 +45,11 @@ En la terminal, ejecute los procesos de los sensores de esta manera:
 ./sensor -s tipo -t intervalo -f archivoConfig -p nombrePipe
 ```
 Donde:
-- `tipo`: Especificación del tipo de sensor, puede ser `PH` o `temperatura` (1 o 2).
-- `intervalo`: Periodo de tiempo entre las mediciones.
-- `archivoConfig`: Archivo de configuración para el sensor.
-- `nombrePipe`: Nombre del conducto usado para comunicarse con el monitor.
-
+- `tipo`: Define el tipo de sensor; puede ser [1,2] `PH` o `temperatura`.
+- `intervalo`: Indica el intervalo de tiempo entre las mediciones.
+- `archivoConfig`: Nombre del archivo de configuración para el sensor.
+- `nombrePipe`: Nombre del conducto utilizado para la comunicación con el monitor.
+  
 ### Ejemplo Práctico
 Para compilar el proyecto, utilice el siguiente comando:
 ```bash
