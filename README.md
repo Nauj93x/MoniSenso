@@ -2,23 +2,23 @@
 
 # Proyecto de Monitoreo de Parámetros de una Reserva de Agua
 
-Este proyecto simula la medición de dos parámetros críticos en una reserva de agua: el pH y la temperatura, utilizando sensores. Los datos medidos se envían a un proceso monitor que los almacena y genera alertas al usuario si se detectan valores fuera del rango normal. A continuación, se detallan los componentes del repositorio y su funcionamiento.
+Este proyecto emula la medición de dos parámetros vitales en una reserva de agua: el pH y la temperatura, mediante el uso de sensores. Los datos recopilados se transmiten a un proceso de monitoreo que los almacena y notifica al usuario si se detectan valores anómalos. A continuación, se describen los componentes del repositorio y su operación.
 
 ## Presentación
-La presentación del proyecto está disponible en el siguiente enlace:
+La presentación del proyecto se puede encontrar en el siguiente enlace:
 [Presentación del Proyecto](https://drive.google.com/file/d/1KujNr6IprCh4j0Jq_AWek3IGJZyReA2_/view?usp=sharing)
 
-En esta presentación se explica el sistema completo para la simulación y monitoreo de datos de sensores. Se enfocará en los aspectos principales del sistema, incluyendo su funcionamiento, configuración y aplicaciones. También se mostrarán ejemplos de uso del sistema para simular y monitorear datos de pH y temperatura.
+En este documento, se describirá el sistema integral diseñado para simular y monitorear los datos de los sensores. La atención se centrará en los elementos fundamentales del sistema, abarcando su operatividad, configuración y posibles aplicaciones. Además, se exhibirán ejemplos prácticos que ilustrarán cómo emplear el sistema tanto para la simulación como para el monitoreo de datos de pH y temperatura.
 
 ## Contenido del Repositorio
 
 ### Código
-- **buffer.cpp - buffer.h**: Módulos que implementan los búferes para almacenar temporalmente las medidas de los sensores.
-- **datos.txt**: Archivo de datos para pruebas.
-- **pH-data.txt - temperature-data.txt**: Archivos de salida donde se almacenarán las medidas de pH y temperatura respectivamente.
-- **monitor.cpp**: Implementación del proceso monitor que gestiona los hilos recolector, H-pH y H-temperatura.
-- **sensor.cpp**: Implementación de los procesos simuladores de sensores que envían datos al monitor.
-- **makefile**: Script de automatización para compilar y ejecutar el proyecto.
+- **buffer.cpp - buffer.h**: Componentes que ejecutan la función de búferes para temporalmente guardar las mediciones de los sensores.
+- **datos.txt**: Archivo de datos destinado a propósitos de prueba.
+- **pH-data.txt - temperature-data.txt**: Documentos de salida designados para almacenar las mediciones de pH y temperatura respectivamente.
+- **monitor.cpp**: Desarrollo del proceso monitor encargado de administrar los hilos recolector, H-pH y H-temperatura.
+- **sensor.cpp**: Implementación de los procesos simuladores de sensores que transmiten datos al monitor.
+- **makefile**: Herramienta de automatización para compilar y ejecutar el proyecto.
 
 ## Ejecución
 
@@ -28,45 +28,45 @@ En la terminal, diríjase al directorio del proyecto y ejecute el comando:
 make
 ```
 
-### Ejecución del Monitor
-Desde el shell, invoque el proceso del monitor de la siguiente manera:
+### Inicio del Monitor
+Desde la terminal, active el proceso del monitor de la siguiente manera:
 ```bash
-./monitor -b bufferSize -t temperature-data -h pH-data -p pipeName
+./monitor -b tamBúfer -t datosTemperatura -h datosPH -p nombrePipe
 ```
 Donde:
-- `bufferSize`: Tamaño de los búferes donde se almacenarán las medidas.
-- `temperature-data`: Nombre del archivo de texto donde el hilo de temperatura almacenará las mediciones de temperatura recibidas.
-- `pH-data`: Nombre del archivo de texto donde el hilo de pH almacenará las mediciones de pH recibidas.
-- `pipeName`: Pipe nominal utilizado para la comunicación con el sensor.
+- `tamBúfer`: Capacidad de los búferes donde se registrarán las mediciones.
+- `datosTemperatura`: Nombre del archivo de texto donde se almacenarán las mediciones de temperatura.
+- `datosPH`: Nombre del archivo de texto donde se guardarán las mediciones de pH.
+- `nombrePipe`: Nombre del conducto utilizado para la comunicación con el sensor.
 
-### Ejecución de los Sensores
-Desde el shell, invoque los procesos de los sensores de la siguiente manera:
+### Inicio de los Sensores
+En la terminal, ejecute los procesos de los sensores de esta manera:
 ```bash
-./sensor -s tipoSensor -t tiempo -f archivo -p pipeName
+./sensor -s tipo -t intervalo -f archivoConfig -p nombrePipe
 ```
 Donde:
-- `tipoSensor`: Tipo de sensor, puede ser `PH` o `temperatura` (1 o 2).
-- `tiempo`: Intervalo de tiempo entre las medidas.
-- `archivo`: Archivo de configuración para el sensor.
-- `pipeName`: Pipe nominal utilizado para la comunicación con el monitor.
+- `tipo`: Especificación del tipo de sensor, puede ser `PH` o `temperatura` (1 o 2).
+- `intervalo`: Periodo de tiempo entre las mediciones.
+- `archivoConfig`: Archivo de configuración para el sensor.
+- `nombrePipe`: Nombre del conducto usado para comunicarse con el monitor.
 
-### Ejemplo
-Compilación del proyecto:
+### Ejemplo Práctico
+Para compilar el proyecto, utilice el siguiente comando:
 ```bash
 make
 ```
 
-Ejecución del monitor:
+Inicie el monitor con los siguientes parámetros:
 ```bash
-./monitor -b 10 -t temperature-data.txt -h pH-data.txt -p pipe1
+./monitor -b 10 -t datosTemperatura.txt -h datosPH.txt -p pipe1
 ```
 
-Ejecución del sensor (debe ejecutarse en menos de 10 segundos después del monitor):
+Ejecute el sensor (debe ser activado en menos de 10 segundos tras el inicio del monitor):
 ```bash
 ./sensor -s 2 -t 3 -f datos.txt -p pipe1
 ```
 
-## Documentación del Desarrollo
-Puede acceder al contenido del proyecto e sus especificaciones a través del siguiente enlace:
+## Detalles del Proyecto
+Para conocer más sobre el desarrollo del proyecto y sus especificaciones, acceda al siguiente enlace:
 [Documentación del Proyecto](MonitoreoSensores/MonitoreoSensores/ProyectosMoniSenso.pdf)
 ```
